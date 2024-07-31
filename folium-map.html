@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_932bf5b1c137ae4e14d5ffbcd7b79830 {
+                #map_9e832ee11270c642f1834b97b304f9ad {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_932bf5b1c137ae4e14d5ffbcd7b79830" ></div>
+            <div class="folium-map" id="map_9e832ee11270c642f1834b97b304f9ad" ></div>
         
 </body>
 <script>
     
     
-            var map_932bf5b1c137ae4e14d5ffbcd7b79830 = L.map(
-                "map_932bf5b1c137ae4e14d5ffbcd7b79830",
+            var map_9e832ee11270c642f1834b97b304f9ad = L.map(
+                "map_9e832ee11270c642f1834b97b304f9ad",
                 {
                     center: [32.88195184526258, -117.23350219670715],
                     crs: L.CRS.EPSG3857,
@@ -60,24 +60,24 @@
 
         
     
-            var tile_layer_720e252d7b17484ce186088f0ec2fc5c = L.tileLayer(
+            var tile_layer_742a4cfeaa96ff7c128f8f57ba1cf5eb = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_720e252d7b17484ce186088f0ec2fc5c.addTo(map_932bf5b1c137ae4e14d5ffbcd7b79830);
+            tile_layer_742a4cfeaa96ff7c128f8f57ba1cf5eb.addTo(map_9e832ee11270c642f1834b97b304f9ad);
         
     
-                var lat_lng_popup_d435678a40716b40ce39f0517607cca3 = L.popup();
+                var lat_lng_popup_a1ac00a1f0ff635fd3c094c2db03252f = L.popup();
                 
             // Adding functionality to allow to add new markers in real time
             function latLngPop(e) {
-                //lat_lng_popup_d435678a40716b40ce39f0517607cca3
+                //lat_lng_popup_a1ac00a1f0ff635fd3c094c2db03252f
                 //    .setLatLng(e.latlng)
                 //    .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
                 //                "<br>Longitude: " + e.latlng.lng.toFixed(4))
-                //    .openOn(map_932bf5b1c137ae4e14d5ffbcd7b79830);
+                //    .openOn(map_9e832ee11270c642f1834b97b304f9ad);
 
                 //console.log("Latitude: " + e.latlng.lat.toFixed(4));
                 //console.log("Longitude: " + e.latlng.lng.toFixed(4));
@@ -87,7 +87,7 @@
                 var circle = L.circle(
                     [e.latlng.lat, e.latlng.lng],
                     {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0,"radius": 5, "stroke": true, "weight": 3}
-                ).addTo(map_932bf5b1c137ae4e14d5ffbcd7b79830);
+                ).addTo(map_9e832ee11270c642f1834b97b304f9ad);
 
                 if (description) {
                     circle.bindPopup(description);
@@ -95,7 +95,16 @@
             }
             // End custom code
     
-                map_932bf5b1c137ae4e14d5ffbcd7b79830.on('click', latLngPop);
+                map_9e832ee11270c642f1834b97b304f9ad.on('click', latLngPop);
             
+    
+            var tile_layer_5ab9c9ed7e51b1d2b5fef94ac016f585 = L.tileLayer(
+                "https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}",
+                {"attribution": "\u0026copy; CNES, Distribution Airbus DS, \u00a9 Airbus DS, \u00a9 PlanetObserver (Contains Copernicus Data) | \u0026copy; \u003ca href=\"https://www.stadiamaps.com/\" target=\"_blank\"\u003eStadia Maps\u003c/a\u003e \u0026copy; \u003ca href=\"https://openmaptiles.org/\" target=\"_blank\"\u003eOpenMapTiles\u003c/a\u003e \u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "ext": "jpg", "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_5ab9c9ed7e51b1d2b5fef94ac016f585.addTo(map_9e832ee11270c642f1834b97b304f9ad);
+        
 </script>
 </html>

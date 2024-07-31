@@ -84,6 +84,23 @@ if __name__ == "__main__":
     # Add popup
     folium.LatLngPopup().add_to(map)
 
+    tiles = 'https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}'
+    attr = ('&copy; CNES, Distribution Airbus DS, © Airbus DS, © PlanetObserver '
+            '(Contains Copernicus Data) | &copy; '
+            '<a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> '
+            '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> '
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors')
+
+    # Add the custom tile layer to the map
+    folium.TileLayer(
+        tiles=tiles,
+        attr=attr,
+        name='Stadia Alidade Satellite',
+        min_zoom=0,
+        max_zoom=20,
+        ext='jpg'
+    ).add_to(map)
+
     # Store the map to a file
     map.save(map_filepath)
 
