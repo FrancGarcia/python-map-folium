@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8ea8caf2ef8c0a9e9bf5649d459fb24e {
+                #map_2996158da29ab1d1be063efb4f527a36 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,18 +39,18 @@
 <body>
     
     
-            <div class="folium-map" id="map_8ea8caf2ef8c0a9e9bf5649d459fb24e" ></div>
+            <div class="folium-map" id="map_2996158da29ab1d1be063efb4f527a36" ></div>
         
 </body>
 <script>
     
     
-            var map_8ea8caf2ef8c0a9e9bf5649d459fb24e = L.map(
-                "map_8ea8caf2ef8c0a9e9bf5649d459fb24e",
+            var map_2996158da29ab1d1be063efb4f527a36 = L.map(
+                "map_2996158da29ab1d1be063efb4f527a36",
                 {
                     center: [32.881978875195344, -117.23347001019796],
                     crs: L.CRS.EPSG3857,
-                    zoom: 9,
+                    zoom: 15,
                     zoomControl: true,
                     preferCanvas: false,
                 }
@@ -60,24 +60,24 @@
 
         
     
-            var tile_layer_981d05f11fd8d4aadc21c7ae7ab38e6a = L.tileLayer(
+            var tile_layer_bca88e2d6a8186c782797dfeb97a6068 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_981d05f11fd8d4aadc21c7ae7ab38e6a.addTo(map_8ea8caf2ef8c0a9e9bf5649d459fb24e);
+            tile_layer_bca88e2d6a8186c782797dfeb97a6068.addTo(map_2996158da29ab1d1be063efb4f527a36);
         
     
-            var circle_c6e0384561967dc89cccd6f8fd50c9cc = L.circle(
+            var circle_1c4ef5c2be20ad70c310cf5347ad2ee7 = L.circle(
                 [32.881978875195344, -117.23347001019796],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25000, "stroke": true, "weight": 3}
-            ).addTo(map_8ea8caf2ef8c0a9e9bf5649d459fb24e);
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 3}
+            ).addTo(map_2996158da29ab1d1be063efb4f527a36);
         
     
-            circle_c6e0384561967dc89cccd6f8fd50c9cc.bindTooltip(
+            circle_1c4ef5c2be20ad70c310cf5347ad2ee7.bindTooltip(
                 `<div>
-                     The marker has radius 25000
+                     The marker has radius 1000
                  </div>`,
                 {"sticky": true}
             );

@@ -5,10 +5,10 @@ if __name__ == "__main__":
     map_filepath = "folium-map.html"
     center_coord = [32.881978875195344, -117.23347001019796]
     marker_coord = [32.881978875195344, -117.23347001019796]
-    marker_radius = 25_000
+    marker_radius = 1_000
 
     # create folium map
-    vmap = folium.Map(center_coord, zoom_start=9)
+    vmap = folium.Map(center_coord, zoom_start=15)
 
     # add a marker to the map
     folium.vector_layers.Circle(
