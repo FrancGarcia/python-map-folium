@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_2996158da29ab1d1be063efb4f527a36 {
+                #map_932bf5b1c137ae4e14d5ffbcd7b79830 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,18 +39,18 @@
 <body>
     
     
-            <div class="folium-map" id="map_2996158da29ab1d1be063efb4f527a36" ></div>
+            <div class="folium-map" id="map_932bf5b1c137ae4e14d5ffbcd7b79830" ></div>
         
 </body>
 <script>
     
     
-            var map_2996158da29ab1d1be063efb4f527a36 = L.map(
-                "map_2996158da29ab1d1be063efb4f527a36",
+            var map_932bf5b1c137ae4e14d5ffbcd7b79830 = L.map(
+                "map_932bf5b1c137ae4e14d5ffbcd7b79830",
                 {
-                    center: [32.881978875195344, -117.23347001019796],
+                    center: [32.88195184526258, -117.23350219670715],
                     crs: L.CRS.EPSG3857,
-                    zoom: 15,
+                    zoom: 20,
                     zoomControl: true,
                     preferCanvas: false,
                 }
@@ -60,27 +60,42 @@
 
         
     
-            var tile_layer_bca88e2d6a8186c782797dfeb97a6068 = L.tileLayer(
+            var tile_layer_720e252d7b17484ce186088f0ec2fc5c = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_bca88e2d6a8186c782797dfeb97a6068.addTo(map_2996158da29ab1d1be063efb4f527a36);
+            tile_layer_720e252d7b17484ce186088f0ec2fc5c.addTo(map_932bf5b1c137ae4e14d5ffbcd7b79830);
         
     
-            var circle_1c4ef5c2be20ad70c310cf5347ad2ee7 = L.circle(
-                [32.881978875195344, -117.23347001019796],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000, "stroke": true, "weight": 3}
-            ).addTo(map_2996158da29ab1d1be063efb4f527a36);
-        
+                var lat_lng_popup_d435678a40716b40ce39f0517607cca3 = L.popup();
+                
+            // Adding functionality to allow to add new markers in real time
+            function latLngPop(e) {
+                //lat_lng_popup_d435678a40716b40ce39f0517607cca3
+                //    .setLatLng(e.latlng)
+                //    .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                //                "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                //    .openOn(map_932bf5b1c137ae4e14d5ffbcd7b79830);
+
+                //console.log("Latitude: " + e.latlng.lat.toFixed(4));
+                //console.log("Longitude: " + e.latlng.lng.toFixed(4));
+
+                var description = prompt("Enter a description for this marker:");
+
+                var circle = L.circle(
+                    [e.latlng.lat, e.latlng.lng],
+                    {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0,"radius": 5, "stroke": true, "weight": 3}
+                ).addTo(map_932bf5b1c137ae4e14d5ffbcd7b79830);
+
+                if (description) {
+                    circle.bindPopup(description);
+                }
+            }
+            // End custom code
     
-            circle_1c4ef5c2be20ad70c310cf5347ad2ee7.bindTooltip(
-                `<div>
-                     The marker has radius 1000
-                 </div>`,
-                {"sticky": true}
-            );
-        
+                map_932bf5b1c137ae4e14d5ffbcd7b79830.on('click', latLngPop);
+            
 </script>
 </html>
